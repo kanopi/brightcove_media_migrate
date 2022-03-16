@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\explo_migrate\Plugin\migrate\source;
+namespace Drupal\brightcove_media_migrate\Plugin\migrate\source;
 
 use Drupal\Core\Database\Database;
 use Drupal\migrate\Plugin\migrate\source\SqlBase;
