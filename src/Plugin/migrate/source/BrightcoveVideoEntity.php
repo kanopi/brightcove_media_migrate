@@ -11,7 +11,7 @@ use Drupal\migrate\Row;
  *
  * @MigrateSource(
  *   id = "brightcove_video_entity",
- *   source_module = "brightcove"
+ *   source_module = "brightcove_media_migrate"
  * )
  */
 class BrightcoveVideoEntity extends SqlBase {

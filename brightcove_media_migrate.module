@@ -20,7 +20,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
  */
 function brightcove_media_migrate_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
-    case 'help.page.modulename':
+    case 'help.page.brightcove_media_migrate':
       $text = file_get_contents(dirname(__FILE__) . "/README.md");
       if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
         return '<pre>' . $text . '</pre>';
@@ -31,7 +31,9 @@ function brightcove_media_migrate_help($route_name, RouteMatchInterface $route_m
         $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
         $config = ['settings' => $settings];
         $filter = $filter_manager->createInstance('markdown', $config);
-        return $filter->process($text, 'en');
+        $filterResult = $filter->process($text, 'en');
+        $text = $filterResult->getProcessedText();
+        return '<div>' . $text->getHtml() . '</div>';
       }
   }
   return NULL;
