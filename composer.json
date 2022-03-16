@@ -1,0 +1,14 @@
+{
+  "name": "drupal/brightcove_media_migrate",
+  "type": "drupal-module",
+  "description": "Brightcove Media Migrate",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/kanopi/brightcove_media_migrate",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://github.com/kanopi/brightcove_media_migrate",
+    "source": "https://github.com/kanopi/brightcove_media_migrate"
+  },
+  "require": { }
+}
