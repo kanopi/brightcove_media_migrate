@@ -35,4 +35,4 @@ shared_configuration:
 dependencies:
   enforced:
     module:
-      - explo_migrate
+      - brightcove_media_migrate
