@@ -120,20 +120,20 @@ class BrightcoveVideoEntity extends SqlBase {
     // Getting to the Drupal 9 db.
     $drupalDb = Database::getConnection('default', 'default');
 
-      $results = $drupalDb->select('brightcove_video__tags', 'ta')
-        ->fields('ta', ['entity_id', 'tags_target_id'])
-        ->condition('ta.entity_id', $row->getSource()['bcvid'], '=')
-        ->execute()
-        ->fetchAll();
+    $results = $drupalDb->select('brightcove_video__tags', 'ta')
+      ->fields('ta', ['entity_id', 'tags_target_id'])
+      ->condition('ta.entity_id', $row->getSource()['bcvid'], '=')
+      ->execute()
+      ->fetchAll();
 
     $tags = [];
 
-      if (!empty($results)) {
-        foreach ($results as $result) {
-          $tags[] = $result->tags_target_id;
-        }
-        $bc_tags = implode(',', $tags);
+    if (!empty($results)) {
+      foreach ($results as $result) {
+        $tags[] = $result->tags_target_id;
       }
+      $bc_tags = implode(',', $tags);
+    }
 
     // Custom source property that can be referenced in yml.
     $row->setSourceProperty('prepare_multiple_tags', $bc_tags);

@@ -34,9 +34,15 @@ The [Brightcove Video Connector](https://www.drupal.org/project/brightcove) cont
 
 ## Installation
 
-These instructions assume you already have the [Brightcove Video Connector](https://www.drupal.org/project/brightcove) module and its Media Brightcove sub module enabled and fully configured to synchronize Brightcove Videos with Drupal.
+These instructions assume you already have the
+[Brightcove Video Connector](https://www.drupal.org/project/brightcove)
+module and its Media Brightcove sub module enabled and fully configured
+to synchronize Brightcove Videos with Drupal.
 
-Install the module as you normally would. Installing the module creates a Media bundle called **Brightcove Video** which can be customized as needed, although it is recommended you not delete any of the fields provided by this module to avoid warnings when migrations are run.
+Install the module as you normally would. Installing the module creates
+a Media bundle called **Brightcove Video** which can be customized as
+needed, although it is recommended you not delete any of the fields provided
+by this module to avoid warnings when migrations are run.
 
 ## Configuration
 Load the migrations:
@@ -63,4 +69,3 @@ Run subsequent migrations - update existing videos and also import new ones:
 
 ## Sponsored By
 * Kanopi Studios (https://kanopi.com/)
-
