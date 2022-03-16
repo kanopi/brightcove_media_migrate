@@ -5,6 +5,8 @@
  * Primary module hooks for Brightcove Media Migrate module.
  */
 
+use Drupal\Core\Routing\RouteMatchInterface;
+
 /**
  * Provide online user help.
  *
