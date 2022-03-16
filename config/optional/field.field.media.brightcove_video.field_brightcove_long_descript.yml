@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_brightcove_long_descript
+    - media.type.brightcove_video
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    full_rte: full_rte
+    basic_rte: '0'
+    plain_text: '0'
+id: media.brightcove_video.field_brightcove_long_descript
+field_name: field_brightcove_long_descript
+entity_type: media
+bundle: brightcove_video
+label: 'Brightcove Long Descript'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

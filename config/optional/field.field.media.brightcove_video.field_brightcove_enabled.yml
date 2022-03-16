@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_brightcove_enabled
+    - media.type.brightcove_video
+id: media.brightcove_video.field_brightcove_enabled
+field_name: field_brightcove_enabled
+entity_type: media
+bundle: brightcove_video
+label: 'Brightcove Enabled'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Enabled
+  off_label: Disabled
+field_type: boolean

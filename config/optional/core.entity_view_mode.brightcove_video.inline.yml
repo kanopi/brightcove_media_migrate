@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - brightcove
+id: brightcove_video.inline
+label: Inline
+targetEntityType: brightcove_video
+cache: true

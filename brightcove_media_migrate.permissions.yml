@@ -1,0 +1,4 @@
+administer brightcove_media_migrate configuration:
+  title: 'Administer brightcove_media_migrate configuration'
+  description: 'Optional description.'
+  restrict access: true

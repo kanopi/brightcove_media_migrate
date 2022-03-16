@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Brightcove Media Migrate module.
+ *
+ */
+
+/**
+ * Provide online user help.
+ *
+ * @param string $route_name
+ *   For page-specific help, use the route name.
+ * @param Drupal\Core\Routing\RouteMatchInterface $route_match
+ *   The current route match.
+ *
+ * @return string|string[]
+ *   A render array, localized string, or object that can be rendered.
+ */
+function brightcove_media_migrate_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.modulename':
+      $text = file_get_contents(dirname(__FILE__) . "/README.md");
+      if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
+        return '<pre>' . $text . '</pre>';
+      }
+      else {
+        // Use the Markdown filter to render the README.
+        $filter_manager = \Drupal::service('plugin.manager.filter');
+        $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+        $config = ['settings' => $settings];
+        $filter = $filter_manager->createInstance('markdown', $config);
+        return $filter->process($text, 'en');
+      }
+  }
+  return NULL;
+}

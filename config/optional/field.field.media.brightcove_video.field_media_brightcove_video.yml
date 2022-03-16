@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_brightcove_video
+    - media.type.brightcove_video
+id: media.brightcove_video.field_media_brightcove_video
+field_name: field_media_brightcove_video
+entity_type: media
+bundle: brightcove_video
+label: 'Brightcove Video'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:brightcove_video'
+  handler_settings: {  }
+field_type: entity_reference

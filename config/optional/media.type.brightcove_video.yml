@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_brightcove
+id: brightcove_video
+label: 'Brightcove Video'
+description: 'Use <em>Brightcove Video</em> for Brightcove videos.'
+source: brightcove_video
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_brightcove_video
+field_map:
+  description: field_brightcove_short_descripti
+  name: name
+  api_client: field_brightcove_api_client
+  video_id: field_brightcove_video_id
+  duration: field_brightcove_video_duration
+  long_description: field_brightcove_long_descript
+  poster: field_brightcove_video_still
+  thumbnail: field_brightcove_video_thumbnail
+  reference_id: field_brightcove_reference_id
+  state: field_brightcove_enabled
+  tags: field_brightcove_video_tags
+  starts_at: field_brightcove_start_date
+  ends_at: field_brightcove_end_date
+  picture_thumbnail: field_brightcove_video_thumbnail
+  picture_poster: field_brightcove_video_still

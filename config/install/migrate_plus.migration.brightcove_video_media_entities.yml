@@ -1,0 +1,70 @@
+id: brightcove_video_media_entities
+label: 'Brightcove Entities to Video Media Entities'
+migration_group: brightcove
+migration_tags:
+  - 'Drupal 9'
+  - Content
+source:
+  plugin: brightcove_video_entity
+process:
+  name:
+    - plugin: get
+      source: name
+  status:
+    - plugin: get
+      source: status
+  field_media_brightcove_video:
+    - plugin: get
+      source: bcvid
+  created:
+    - plugin: get
+      source: created
+  changed:
+    - plugin: get
+      source: changed
+  field_brightcove_short_descripti/value:
+    - plugin: get
+      source: description
+  field_brightcove_short_descripti/format:
+    - plugin: default_value
+      default_value: full_rte
+  field_brightcove_long_descript/value:
+    - plugin: get
+      source: long_description
+  field_brightcove_long_descript/format:
+    - plugin: default_value
+      default_value: full_rte
+  field_brightcove_video_tags:
+    - plugin: skip_on_empty
+      source: prepare_multiple_tags
+      method: process
+    - plugin: explode
+      delimiter: ","
+  field_brightcove_related_link:
+    - plugin: get
+      source: related_link__uri
+  field_brightcove_video_id:
+    - plugin: get
+      source: video_id
+  field_brightcove_advertising:
+    - plugin: get
+      source: economics
+  field_brightcove_duration:
+    - plugin: get
+      source: duration
+  field_brightcove_video_still/target_id:
+    - plugin: get
+      source: poster__target_id
+  field_brightcove_video_still/alt:
+    - plugin: get
+      source: poster__alt
+  field_brightcove_video_thumbnail/target_id:
+    - plugin: get
+      source: thumbnail__target_id
+  field_brightcove_video_thumbnail/alt:
+    - plugin: get
+      source: thumbnail__alt
+destination:
+  plugin: 'entity:media'
+  default_bundle: brightcove_video
+migration_dependencies: { }

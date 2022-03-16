@@ -1,0 +1,61 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.masonry
+    - field.field.media.brightcove_video.field_brightcove_advertising
+    - field.field.media.brightcove_video.field_brightcove_duration
+    - field.field.media.brightcove_video.field_brightcove_enabled
+    - field.field.media.brightcove_video.field_brightcove_long_descript
+    - field.field.media.brightcove_video.field_brightcove_related_link
+    - field.field.media.brightcove_video.field_brightcove_short_descripti
+    - field.field.media.brightcove_video.field_brightcove_video_id
+    - field.field.media.brightcove_video.field_brightcove_video_still
+    - field.field.media.brightcove_video.field_brightcove_video_tags
+    - field.field.media.brightcove_video.field_brightcove_video_thumbnail
+    - field.field.media.brightcove_video.field_components
+    - field.field.media.brightcove_video.field_copyright_holder
+    - field.field.media.brightcove_video.field_copyright_year
+    - field.field.media.brightcove_video.field_grade_band
+    - field.field.media.brightcove_video.field_media_brightcove_video
+    - field.field.media.brightcove_video.field_media_series
+    - field.field.media.brightcove_video.field_related_content
+    - field.field.media.brightcove_video.field_subject
+    - media.type.brightcove_video
+id: media.brightcove_video.masonry
+targetEntityType: media
+bundle: brightcove_video
+mode: masonry
+content:
+  field_media_brightcove_video:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: inline
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_brightcove_advertising: true
+  field_brightcove_duration: true
+  field_brightcove_enabled: true
+  field_brightcove_long_descript: true
+  field_brightcove_related_link: true
+  field_brightcove_short_descripti: true
+  field_brightcove_video_id: true
+  field_brightcove_video_still: true
+  field_brightcove_video_tags: true
+  field_brightcove_video_thumbnail: true
+  field_components: true
+  field_copyright_holder: true
+  field_copyright_year: true
+  field_grade_band: true
+  field_media_series: true
+  field_related_content: true
+  field_subject: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_brightcove_advertising
+    - media.type.brightcove_video
+  module:
+    - options
+id: media.brightcove_video.field_brightcove_advertising
+field_name: field_brightcove_advertising
+entity_type: media
+bundle: brightcove_video
+label: 'Brightcove Advertising'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
