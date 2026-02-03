@@ -2,7 +2,7 @@ name: Brightcove Media Migrate
 type: module
 description: Defines and auto-generates Brightcove Video media entities using Drupal&#039;s migration ecosystem.
 package: Custom
-core_version_requirement: ^8 || ^9 || ^10
+core_version_requirement: ^8 || ^9 || ^10 || ^11
 dependencies:
   - brightcove:brightcove
   - field_group:field_group
